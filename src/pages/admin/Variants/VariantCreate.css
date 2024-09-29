@@ -1,0 +1,116 @@
+.variant-create {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.variant-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-label,
+.variant-type-label,
+.value-label,
+.price-label,
+.stock-label,
+.image-label {
+  margin-bottom: 10px;
+}
+
+.product-select,
+.variant-type-select,
+.value-input,
+.price-input,
+.stock-input,
+.image-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.variant-card {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+}
+
+.variant-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-variant-btn,
+.remove-value-btn,
+.add-value-btn,
+.add-variant-btn,
+.submit-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-variant-btn:hover,
+.remove-value-btn:hover,
+.add-value-btn:hover,
+.add-variant-btn:hover,
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.error-messages {
+  margin-top: 15px;
+  background-color: #ffcccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.error-message {
+  color: #d8000c;
+  margin: 5px 0;
+}
+.preview-image{
+    width:50px;
+    height:50px;
+}
+
+.variant-value-group {
+    margin-bottom: 15px; /* Adds space between different value groups */
+}
+
+.value-label,
+.price-label,
+.stock-label,
+.image-label {
+    display: block; /* Ensures labels and inputs stack vertically */
+    margin-bottom: 8px; /* Adds space between labels and inputs */
+}
+
+.value-input,
+.price-input,
+.stock-input,
+.image-input {
+    width: 100%; /* Makes inputs take full width */
+    padding: 8px; /* Adds some padding to inputs */
+    margin-bottom: 10px; /* Adds space below inputs */
+}
+
+.remove-value-btn {
+    margin-top: 8px; /* Adds space above the remove button */
+}

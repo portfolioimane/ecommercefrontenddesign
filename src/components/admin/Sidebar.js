@@ -29,6 +29,16 @@ const Sidebar = () => {
                     </div>
                 )}
 
+                         <Nav.Link onClick={() => toggleDropdown('variants')}>
+                    <FaTags /> Variants {isOpen.variants ? <FaChevronUp /> : <FaChevronDown />}
+                </Nav.Link>
+                {isOpen.variants && (
+                    <div className="dropdown">
+                        <Nav.Link as={Link} to="/admin/variants">Variants List</Nav.Link>
+                        <Nav.Link as={Link} to="/admin/variants/create">Add Variants</Nav.Link>
+                    </div>
+                )}
+
                 <Nav.Link onClick={() => toggleDropdown('products')}>
                     <FaBox /> Products {isOpen.products ? <FaChevronUp /> : <FaChevronDown />}
                 </Nav.Link>

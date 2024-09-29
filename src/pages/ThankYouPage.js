@@ -1,18 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import axios from '../axios'; // Make sure the path is correct
 import './ThankYouPage.css';
 import { FaCheckCircle } from 'react-icons/fa'; // Optional: Add an icon for success
 
 const ThankYouPage = () => {
     const [recentOrder, setRecentOrder] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const { id } = useParams(); // Get the order ID from the URL parameters
 
     useEffect(() => {
-        // Retrieve the most recent order from local storage
-        const storedOrder = localStorage.getItem('recentOrder');
-        if (storedOrder) {
-            setRecentOrder(JSON.parse(storedOrder));
-        }
-    }, []);
+        const fetchOrder = async () => {
+            try {
+                const response = await axios.get(`/api/orders/${id}`); // Adjust the API endpoint as necessary
+                setRecentOrder(response.data.order);
+            } catch (error) {
+                console.error('Error fetching order:', error);
+                setError('Could not fetch order details. Please try again later.');
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchOrder();
+    }, [id]);
 
     return (
         <div className="thank-you-container">
@@ -22,7 +34,11 @@ const ThankYouPage = () => {
             </div>
             <p>Your order has been successfully placed.</p>
 
-            {recentOrder ? (
+            {loading ? (
+                <p>Loading order details...</p>
+            ) : error ? (
+                <p>{error}</p>
+            ) : recentOrder ? (
                 <div className="order-details">
                     <h3>Order Summary</h3>
                     <div className="order-info">

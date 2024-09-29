@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { setOrders } from '../../../redux/admin/orderSlice';
+import { setOrders } from '../../../redux/orderSlice';
 import { Table } from 'react-bootstrap';
 
 const OrderDetails = () => {

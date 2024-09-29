@@ -1,0 +1,75 @@
+.variant-edit {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.variant-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-label, .variant-type-label, .value-label, .price-label, .stock-label, .image-label {
+  margin-bottom: 10px;
+}
+
+.variant-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.color-picker {
+  margin-top: 10px;
+}
+
+.selected-color {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.remove-value-button, .add-value-button, .submit-button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-value-button:hover, .add-value-button:hover, .submit-button:hover {
+  background-color: #0056b3;
+}
+
+.variant-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin-top: 10px;
+}
+
+.image-thumbnail{
+    width:50px;
+    height:50px;
+}
+
+
+.image-preview{
+    width:50px;
+    height:50px;
+}
+
+.variant-image-preview{
+   width:50px;
+    height:50px;
+}
+
+
+.remove-variant-button{
+  dispaly:block;
+    width: 100%;    /* Optional: make it full width */
+      background-color: #ff4d4d; /* Example color for the button */
+}
+
